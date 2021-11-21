@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import data from "../hotel-data/hotels";
+import data from "../assets/hotels";
 import HotelCard from "./HotelCard";
 class HotelsGallery extends Component {
   render() {
@@ -7,7 +7,8 @@ class HotelsGallery extends Component {
       <div className="hotels-gallery">
         <ul>
           {data.map(obj => {
-            return <li>{obj["מלון מרום"]}</li>;
+            return <HotelCard key={obj["051"]} name={obj["מלון מרום"]} />;
+            // return <li>{obj["מלון מרום"]}</li>;
             // will render HotelCard Component with prop name
           })}
         </ul>
